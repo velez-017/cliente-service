@@ -61,8 +61,8 @@ class ClienteServiceImplTest {
 
         assertThat(resultado.getId()).isEqualTo(1L);
 
-        // ❌ FALLA DELIBERADA PARA VER EL PIPELINE EN ROJO
-        assertThat(resultado.getNombre()).isEqualTo("Carlos");
+        // ✅ ASSERTION CORRECTO
+        assertThat(resultado.getNombre()).isEqualTo("Linus");
 
         verify(clienteDao, times(1)).findById(1L);
     }
